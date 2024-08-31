@@ -3,30 +3,19 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * kernel.h
+ * kernel_data.h
  *
- * Code generation for function 'kernel'
+ * Code generation for function 'kernel_data'
  *
  */
 
-#ifndef KERNEL_H
-#define KERNEL_H
+#ifndef KERNEL_DATA_H
+#define KERNEL_DATA_H
 
 /* Include files */
 #include "rtwtypes.h"
 #include <stddef.h>
-//#include <stdlib.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-/* Function Declarations */
-extern void kernel(void);
-
-#ifdef __cplusplus
-}
-#endif
+#include <stdlib.h>
 
 #endif
-/* End of code generation (kernel.h) */
+/* End of code generation (kernel_data.h) */

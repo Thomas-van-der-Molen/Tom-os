@@ -2,7 +2,7 @@
 ## Makefile generated for component 'kernel'. 
 ## 
 ## Makefile     : kernel_rtw.mk
-## Generated on : Mon Aug 26 18:37:03 2024
+## Generated on : Tue Aug 27 20:36:30 2024
 ## Final product: ./kernel.a
 ## Product type : static-library
 ## 
@@ -22,7 +22,7 @@ MAKEFILE                  = kernel_rtw.mk
 MATLAB_ROOT               = /usr/local/MATLAB/R2024a
 MATLAB_BIN                = /usr/local/MATLAB/R2024a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/glnxa64
-START_DIR                 = /home/thomas
+START_DIR                 = /home/thomas/tomos
 TGT_FCN_LIB               = ISO_C
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -150,7 +150,7 @@ BUILD_TYPE = "Static Library"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR)/codegen/lib/kernel -I$(START_DIR) -I$(MATLAB_ROOT)/extern/include
+INCLUDES_BUILDINFO = -I$(START_DIR)/codegen/lib/kernel -I$(START_DIR) -I$(START_DIR)/;$(START_DIR)/msh_lib; -I$(MATLAB_ROOT)/extern/include
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -189,7 +189,7 @@ PREBUILT_OBJS =
 ## LIBRARIES
 ###########################################################################
 
-LIBS = 
+LIBS = $(START_DIR)/msh_lib/mshlib.h
 
 ###########################################################################
 ## SYSTEM LIBRARIES

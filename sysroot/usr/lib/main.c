@@ -3,7 +3,7 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * main.h
+ * main.c
  *
  * Code generation for function 'main'
  *
@@ -34,26 +34,31 @@
 /*                                                                       */
 /*************************************************************************/
 
-#ifndef MAIN_H
-#define MAIN_H
-
 /* Include files */
-#include "rtwtypes.h"
-#include <stddef.h>
-//#include <stdlib.h>
+#include "main.h"
+#include "kernel.h"
+#include "kernel_terminate.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-/* Function Declarations */
-extern int main(int argc, char **argv);
-
-extern void main_kernel(void);
-
-#ifdef __cplusplus
+/* Function Definitions */
+int main(int argc, char **argv)
+{
+  (void)argc;
+  (void)argv;
+  /* The initialize function is being called automatically from your entry-point
+   * function. So, a call to initialize is not included here. */
+  /* Invoke the entry-point functions.
+You can call entry-point functions multiple times. */
+  main_kernel();
+  /* Terminate the application.
+You do not need to do this more than one time. */
+  kernel_terminate();
+  return 0;
 }
-#endif
 
-#endif
-/* End of code generation (main.h) */
+void main_kernel(void)
+{
+  /* Call the entry-point 'kernel'. */
+  kernel();
+}
+
+/* End of code generation (main.c) */

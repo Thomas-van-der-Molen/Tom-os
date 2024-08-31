@@ -56,9 +56,9 @@ mxArray *emlrtMexFcnProperties(void)
                 emlrtMxCreateDoubleScalar(0.0));
   emlrtSetField(xEntryPoints, 0, "ConstantInputs", xInputs);
   emlrtSetField(xEntryPoints, 0, "FullPath",
-                emlrtMxCreateString("/home/thomas/kernel.m"));
+                emlrtMxCreateString("/home/thomas/tomos/kernel.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(739490.76971064811));
+                emlrtMxCreateDoubleScalar(739491.85651620373));
   emlrtSetField(xEntryPoints, 0, "Constructor",
                 emlrtMxCreateLogicalScalar(false));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));
